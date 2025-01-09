@@ -13,7 +13,7 @@ def DB_Connection():
         connection=mysql.connector.connect(
          host='localhost',
          user='root',
-         password='Joel@123',
+         password='',
          database='TennisStatsPro'
     )
 
