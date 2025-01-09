@@ -152,7 +152,7 @@ def Main():
     connection=connecting_to_database(
         host='localhost',
         user='root',
-        password='Joel@123',
+        password='',
         database='TennisStatsPro'
      )
     if connection.is_connected():
