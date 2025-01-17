@@ -223,11 +223,11 @@ def Competitions(connection,competition_type, gender, CategoryName):
 def Competitors(connection,name_search,rank_range,selected_countries,points_threshold):
 
     col1, col2= st.columns(2)    
-    TotalCompetitor=Query_DB(connection,"SELECT count(distinct(venue_name)) as TotalVenues FROM venues;")
-    col1.metric("Total Venues 👥", TotalCompetitor[0][0])
+    TotalVenues=Query_DB(connection,"SELECT count(distinct(venue_name)) as TotalVenues FROM venues;")
+    col1.metric("Total Venues 👥", TotalVenues[0][0])
 
-    HighestPoints=Query_DB(connection,"SELECT count(distinct(complex_name)) FROM complexes;")
-    col2.metric("Total Complexes", HighestPoints[0][0])
+    TotalComplexes=Query_DB(connection,"SELECT count(distinct(complex_name)) FROM complexes;")
+    col2.metric("Total Complexes", TotalComplexes[0][0])
     st.header("Competitor Details")
     #Competitor Details
     query = """
